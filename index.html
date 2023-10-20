@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vale Estudos</title>
+    <!-- Vincula o arquivo CSS externo para estilização -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Vale Estudos</h1>
+    </header>
+    
+    <!-- Barra lateral (menu) -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <!-- Item de menu com submenu -->
+            <li class="has-submenu">
+                <a href="#">Menu</a>
+                <!-- Submenu do item de menu -->
+                <ul class="submenu">
+                    <li class="has-submenu">
+                        <a href="#ensino-medio">Ensino medio</a>
+                        <!-- Submenu dentro de um submenu -->
+                        <ul class="submenu">
+                            <li class="has-submenu">
+                                <a href="#1-ano">1º Ano</a>
+                                <!-- Submenu dentro de um submenu -->
+                                <ul class="submenu">
+                                    <li><a href="historia_fundamental.html">História</a></li>
+                                    <li><a href="geografia_fundamental.html">Geografia</a></li>
+                                    <li><a href="ciencias_fundamental.html">Ciências</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#ensino-fundamental">Ensino Fundamental</a>
+                        <!-- Submenu dentro de um submenu -->
+                        <ul class="submenu">
+                            <li class="has-submenu">
+                                <a href="#6-ano">6º Ano</a>
+                                <!-- Submenu dentro de um submenu -->
+                                <ul class="submenu">
+                                    <li><a href="historia_fundamental.html">História</a></li>
+                                    <li><a href="geografia_fundamental.html">Geografia</a></li>
+                                    <li><a href="ciencias_fundamental.html">Ciências</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <section id="home">
+        <h2>Página Inicial</h2>
+        <p>Esta é a página inicial do Vale Estudos. Bem-vindo!</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Texto informativo sobre a missão e visão do Vale Estudos.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco:</p>
+        <p>Email: contato@valeestudos.com</p>
+        <p>Telefone: (XX) XXXX-XXXX</p>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2023 Vale Estudos</p>
+    </footer>
+    
+    <!-- JavaScript para lidar com a ação de clique nos submenus -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleciona todos os itens de menu com submenu
+            const submenuItems = document.querySelectorAll(".has-submenu");
+
+            // Itera sobre os itens de menu com submenu
+            submenuItems.forEach((submenu) => {
+                // Obtém o elemento pai (item de menu)
+                const parentListItem = submenu;
+                // Obtém o link dentro do item de menu
+                const link = parentListItem.querySelector("a");
+
+                // Adiciona um ouvinte de clique ao link
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); // Impede a ação de link padrão
+                    // Obtém o submenu associado ao item de menu
+                    const subMenu = parentListItem.querySelector(".submenu");
+                    // Alterna a classe 'active' para exibir ou ocultar o submenu
+                    subMenu.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
