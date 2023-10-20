@@ -1,0 +1,74 @@
+/* Estilos gerais para a página */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+/* Estilos para a barra lateral (menu) */
+nav.sidebar {
+    width: 50px;
+    background-color: #333;
+    color: #fff;
+    position: fixed; /* Fixa a barra lateral à esquerda */
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos para itens de submenu */
+ul.submenu {
+    display: none;
+    background-color: #444;
+    padding: 10px;
+}
+
+ul.submenu.active {
+    display: block;
+}
+
+/* Estilos para o conteúdo principal (área à direita da barra lateral) */
+section {
+    margin-left: 100px; /* Deixa espaço para a barra lateral */
+    padding: 20px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
